@@ -1,0 +1,12 @@
+appName: paymentservice
+appImage: gcr.io/google-samples/microservices-demo/paymentservice
+appVersion: v0.3.6
+appReplicas: 2
+containerPort: 50051
+containerEnvVars:
+  - name: PORT
+    value: "50051" #no endpoints needed as payment service dont talk to any other service(DIAGRAM)
+  - name: DISABLE_PROFILER  # Add this environment variable
+    value: "true"
+
+servicePort: 50051
